@@ -7,19 +7,25 @@
 
 = link_to "Add album", new_album_path
 .table
-  .header-container
+  %div{:class => "table-header cols-4"}
     .header
       %p Album
     .header
       %p Artist
     .header
       %p Year
+    .header
+      %p Actions
   - @albums.each do |album|
-    .row
-      .container
+    %div{:class => "table-row cols-4"}
+      .table-cell
         %p img
         %p= album.name
-      .container
+      .table-cell
         %p Artist placeholder
-      .container
+      .table-cell
         %p= album.released_at
+      .table-cell
+        %p= link_to "Edit", edit_album_path(album.id)
+        |
+        %p= link_to "Destroy", album_path(album), method: :delete, data: {confirm: "Are you sure?"}

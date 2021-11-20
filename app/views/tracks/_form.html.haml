@@ -1,4 +1,4 @@
-= form_with model: @tracks do |f|
+= form_with model: @track do |f|
   .text-field
     = f.label :name
     = f.text_field :name
@@ -6,18 +6,7 @@
   .text-area-field
     = f.label :credits
     = f.text_area :credits
-  
-  .date-field
-    = f.label :formed_at
-    = f.date_field :formed_at
-  
-  .file-field
-    = f.label :avatar
-    = f.file_field :avatar
-  
-  .file-field
-    = f.label :cover_photo
-    = f.file_field :cover_photo
+    
   %br/
   = f.submit
 

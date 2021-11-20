@@ -1,0 +1,48 @@
+@import '../variables';
+
+.table{
+    display:flex;
+    flex-flow: column;
+    margin: auto;
+    width: clamp(500px, 80%, 1200px);
+}
+
+.table-row, .table-header{
+    display: grid;
+    &.cols-5{
+        grid-template-columns: 40% repeat(4, 1fr);
+    }
+    &.cols-4{
+        grid-template-columns: 50% repeat(3, 1fr);
+    }
+    &.cols-3{
+        grid-template-columns: 70% repeat(2, 1fr);
+    }
+}
+
+.table-cell{
+    display:grid;
+    place-items:center;
+    align-items: center;
+}
+
+.table-column{
+    display:grid;
+    place-items: center;
+}
+
+.table-row{
+    border-bottom: thin solid $color-2;
+    height: 5em;
+    & > :first-child{
+        display:flex;
+        justify-content: left;
+    }
+}
+
+.table-header{
+    place-items: center;
+}
+
+
+

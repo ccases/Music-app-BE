@@ -5,13 +5,19 @@
 = link_to "See all albums", albums_path
 = link_to "See all tracks", tracks_path
 
-= link_to "Add album", new_artist_path
+= link_to "Add artist", new_artist_path
 .table
-  .header-container
+  %div{:class => "table-header cols-3"}
     .header
       %p Artist
+    .header
+      %p Actions
   - @artists.each do |artist|
-    .row
-      .container
+    %div{:class => "table-row cols-3"}
+      .table-cell
         %p img
         %p= artist.name
+      .table-cell
+        %p= link_to "Edit", edit_artist_path(artist.id)
+        |
+        %p= link_to "Destroy", artist_path(artist), method: :delete, data: {confirm: "Are you sure?"}

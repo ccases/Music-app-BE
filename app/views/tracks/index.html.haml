@@ -7,7 +7,7 @@
 
 = link_to "Add track", new_track_path
 .table
-  .header-container
+  %div{:class => "table-header cols-5"}
     .header
       %p Title
     .header
@@ -16,14 +16,19 @@
       %p Album
     .header
       %p Duration
+    .header
+      %p Actions
   - @tracks.each do |track|
-    .row
-      .container
+    %div{:class => "table-row cols-5"}
+      .table-cell
         %p album_img
         %p= track.name
-      .container
-        %p Artist
-      .container
-        %p Album
-      .container
-        %p Duration
+      .table-cell
+        %p Artist PH
+      .table-cell
+        %p Album PH
+      .table-cell
+        %p Duration PH
+      .table-cell
+        %p= link_to "Edit", edit_track_path(track.id)
+        %p= link_to "Destroy", track_path(track), method: :delete, data: {confirm: "Are you sure?"}
