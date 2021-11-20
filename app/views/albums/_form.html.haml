@@ -1,9 +1,28 @@
 = form_with model: @albums do |f|
-  = f.label :title
-  = f.text_field :title
+  .text-field
+    = f.label :name
+    = f.text_field :name
 
+  .date-field
+    = f.label :released_at, 'Release Date'
+    = f.date_field :released_at
+  
+  .radio-field
+    = f.label :kind, 'Type of album'
+    = f.radio_button :kind, 'LP'
+    LP
+    = f.radio_button :kind, 'EP'
+    EP
+    = f.radio_button :kind, 'Single'
+    Single
+
+  .file-field
+    =f.label :cover_art
+    =f.file_field :cover_art
   %br/
-  = f.submit
+
+  .submit-btn
+    = f.submit
 
 = link_to albums_path do
   Back to index

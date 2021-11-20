@@ -4,3 +4,14 @@
 
 = link_to "See all albums", albums_path
 = link_to "See all tracks", tracks_path
+
+= link_to "Add album", new_artist_path
+.table
+  .header-container
+    .header
+      %p Artist
+  - @artists.each do |artist|
+    .row
+      .container
+        %p img
+        %p= artist.name

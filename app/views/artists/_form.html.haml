@@ -1,7 +1,23 @@
 = form_with model: @artists do |f|
-  = f.label :title
-  = f.text_field :title
+  .text-field
+    = f.label :name
+    = f.text_field :name
 
+  .text-area-field
+    = f.label :bio
+    = f.text_area :bio
+
+  .date-field
+    = f.label :formed_at
+    = f.date_field :formed_at
+
+  .file-field
+    = f.label :avatar
+    = f.file_field :avatar
+  
+  .file-field
+    = f.label :cover_photo
+    = f.file_field :cover_photo
   %br/
   = f.submit
 
