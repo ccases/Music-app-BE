@@ -1,0 +1,9 @@
+= form_with model: @albums do |f|
+  = f.label :title
+  = f.text_field :title
+
+  %br/
+  = f.submit
+
+= link_to albums_path do
+  Back to index

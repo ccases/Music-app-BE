@@ -1,0 +1,9 @@
+= form_with model: @artists do |f|
+  = f.label :title
+  = f.text_field :title
+
+  %br/
+  = f.submit
+
+= link_to artists_path do
+  Back to index
