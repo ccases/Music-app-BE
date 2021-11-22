@@ -21,7 +21,8 @@
   - @tracks.each do |track|
     .table-row.cols-5
       .table-cell
-        %p album_img
+        .list-thumbnail
+          =image_tag "defaults/album.jpg", size:"50x50"
         %p= track.name
       .table-cell
         %p Artist PH

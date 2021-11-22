@@ -15,9 +15,12 @@
   - @artists.each do |artist|
     .table-row.cols-3
       .table-cell
-        %p img
+        .list-thumbnail
+          - if artist.avatar.attached?
+            = image_tag artist.avatar.variant(resize:"50x50")
+          - else
+            = image_tag "defaults/artist.png", size:"50x50"
         %p= artist.name
       .table-cell
         %p= link_to "Edit", edit_artist_path(artist.id)
-        |
         %p= link_to "Destroy", artist_path(artist), method: :delete, data: {confirm: "Are you sure?"}

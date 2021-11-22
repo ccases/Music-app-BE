@@ -22,13 +22,20 @@
 
 .table-cell{
     display:grid;
+    white-space: nowrap;
+    overflow: hidden;
     place-items:center;
     align-items: center;
+    text-overflow: ellipsis;
 }
 
 .table-column{
     display:grid;
     place-items: center;
+}
+
+.list-thumbnail{
+    margin: 0px 20px;
 }
 
 .table-row{

@@ -19,12 +19,16 @@
   - @albums.each do |album|
     .table-row.cols-4
       .table-cell
-        %p img
+        .list-thumbnail
+          - if album.cover_art.attached?
+            = image_tag album.cover_art.variant(resize:"50x50")
+          - else
+            = image_tag "defaults/album.jpg", size:"50x50"
         %p= album.name
       .table-cell
         %p Artist placeholder
       .table-cell
-        %p= album.released_at
+        %p= album.released_at.year
       .table-cell
         %p= link_to "Edit", edit_album_path(album.id)
         |
