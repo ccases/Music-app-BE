@@ -7,7 +7,7 @@
 
 = link_to "Add track", new_track_path
 .table
-  %div{:class => "table-header cols-5"}
+  .table-header.cols-5
     .header
       %p Title
     .header
@@ -19,7 +19,7 @@
     .header
       %p Actions
   - @tracks.each do |track|
-    %div{:class => "table-row cols-5"}
+    .table-row.cols-5
       .table-cell
         %p album_img
         %p= track.name

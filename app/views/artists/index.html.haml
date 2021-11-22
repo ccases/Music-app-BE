@@ -7,13 +7,13 @@
 
 = link_to "Add artist", new_artist_path
 .table
-  %div{:class => "table-header cols-3"}
+  .table-header.cols-3
     .header
       %p Artist
     .header
       %p Actions
   - @artists.each do |artist|
-    %div{:class => "table-row cols-3"}
+    .table-row.cols-3
       .table-cell
         %p img
         %p= artist.name

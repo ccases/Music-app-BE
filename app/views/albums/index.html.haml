@@ -7,7 +7,7 @@
 
 = link_to "Add album", new_album_path
 .table
-  %div{:class => "table-header cols-4"}
+  .table-header.cols-4
     .header
       %p Album
     .header
@@ -17,7 +17,7 @@
     .header
       %p Actions
   - @albums.each do |album|
-    %div{:class => "table-row cols-4"}
+    .table-row.cols-4
       .table-cell
         %p img
         %p= album.name

@@ -3,9 +3,10 @@ input:focus, textarea:focus, select:focus{
     outline: none;
 }
 
-input{
+input, textarea{
     background-color: $color-1;
 }
+
 
 .text-field{
     display:flex;
