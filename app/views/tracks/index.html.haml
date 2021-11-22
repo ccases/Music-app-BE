@@ -1,9 +1,20 @@
+
+-# NAV BAR COMPONENT
+.nav-bar
+  .page-title
+    Music on 
+    .color-change= "&nbsp;Rails".html_safe
+  .nav-links
+    .nav-bar-link= link_to "Artists", artists_path
+    .nav-bar-link= link_to "Albums", albums_path
+    .nav-bar-link.active= link_to "Tracks", tracks_path
+
+.nav-bar-filler
+
+-# NAV BAR COMPONENT END
+
 %h1 All tracks
 
-%p Coming from Tracks#index
-
-= link_to "See all artists", artists_path
-= link_to "See all albums", albums_path
 
 = link_to "Add track", new_track_path
 .table

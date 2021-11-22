@@ -4,8 +4,8 @@ class CreateAlbums < ActiveRecord::Migration[6.1]
       t.string :name
       t.boolean :released, default: false
       t.datetime :released_at
-      t.time :length
-      t.text :kind, array: true
+      t.float :length
+      t.text :kind
 
       t.text :cover_art_url
 

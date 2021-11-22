@@ -15,6 +15,7 @@
  */
  @import './components/*';
  @import './variables';
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Outfit:wght@400;700&display=swap');
 
  * {
      padding: 0;
@@ -22,7 +23,6 @@
      box-sizing: border-box;
      color: $color-4;
      font-family: 'Lato', sans-serif;
-     src: url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
  }
 
  body{

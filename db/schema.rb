@@ -44,22 +44,22 @@ ActiveRecord::Schema.define(version: 2021_11_19_123049) do
     t.string "name"
     t.boolean "released", default: false
     t.datetime "released_at"
-    t.time "length"
-    t.string "kind"
-    t.string "cover_art_url"
+    t.float "length"
+    t.text "kind"
+    t.text "cover_art_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
-    t.string "permalink"
-    t.string "bio"
+    t.text "permalink"
+    t.text "bio"
     t.datetime "formed_at"
-    t.boolean "verified"
+    t.boolean "verified", default: false
     t.datetime "verified_at"
-    t.string "avatar_url"
-    t.string "cover_photo_url"
+    t.text "avatar_url"
+    t.text "cover_photo_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -67,9 +67,9 @@ ActiveRecord::Schema.define(version: 2021_11_19_123049) do
   create_table "tracks", force: :cascade do |t|
     t.string "url"
     t.string "name"
-    t.string "credits"
+    t.text "credits"
     t.boolean "available", default: false
-    t.time "length"
+    t.float "length"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

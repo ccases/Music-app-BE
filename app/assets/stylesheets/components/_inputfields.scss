@@ -3,6 +3,17 @@ input:focus, textarea:focus, select:focus{
     outline: none;
 }
 
+.form-container{
+    width: clamp(500px, 80%, 1200px);
+    margin:auto;
+    margin-top: 30px;
+}
+
+.field_with_errors{
+    display:inline;
+    background-color: $color-error;
+}
+
 input, textarea{
     background-color: $color-1;
 }
