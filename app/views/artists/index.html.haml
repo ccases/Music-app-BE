@@ -12,13 +12,13 @@
 
 -# NAV BAR COMPONENT END
 
-%h1 All artists
 
-= link_to "See all albums", albums_path
-= link_to "See all tracks", tracks_path
 
-= link_to "Add artist", new_artist_path
+
 .table
+  %h1 All artists
+  .add-button
+    = link_to "Add artist", new_artist_path
   .table-header.cols-3
     .header
       %p Artist

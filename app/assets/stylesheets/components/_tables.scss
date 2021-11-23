@@ -5,9 +5,17 @@
     flex-flow: column;
     margin: auto;
     width: clamp(500px, 80%, 1200px);
+    align-items: center;
+    >h1{
+        margin-top: 40px;
+    }
+    >.add-button{
+        margin:30px 0;
+    }
 }
 
 .table-row, .table-header{
+    width:100%;
     display: grid;
     &.cols-5{
         grid-template-columns: 40% repeat(4, 1fr);
@@ -44,6 +52,9 @@
     & > :first-child{
         display:flex;
         justify-content: left;
+    }
+    &:hover{
+        background-color: $color-2;
     }
 }
 

@@ -1,15 +1,19 @@
-
-= form_with model: @track do |f|
-  .text-field
-    = f.label :name
-    = f.text_field :name
-  
-  .text-area-field
-    = f.label :credits
-    = f.text_area :credits
+.form-in-form-container
+  = form_with model: @track do |f|
+    .text-field.field-container
+      = f.label :name
+      = f.text_field :name
     
-  %br/
-  = f.submit
+    .text-area-field.field-container
+      = f.label :credits
+      = f.text_area :credits
+    
+    .file-field.field-container
+      = f.label :audio_file
+      = f.file_field :audio_file
+    
+    .submit-field.field-container
+      = f.submit
 
-= link_to tracks_path do
-  Back to index
+  .back-field.field-container
+    =link_to "Back", tracks_path

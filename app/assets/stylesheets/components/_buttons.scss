@@ -1,0 +1,41 @@
+@import "../variables";
+
+.submit-field, .back-field{
+    >input[type="submit"], a{
+        font-size: 1.5em;
+        padding: 10px;
+        border: none;
+        background-color: $color-2;
+        transition: background-color 0.3s;
+        &:hover{
+            cursor: pointer;
+            background-color: $color-text-dim;
+        }
+    }
+}
+
+.submit-field{
+    &.field-container{
+        border:0;
+    }
+}
+
+.back-field{
+    >a{
+        text-decoration:none;
+    }
+    &.field-container{
+        border:0;
+    }
+}
+
+.add-button{
+    >a{
+        text-decoration:none;
+        padding: 10px;
+        background-color: $color-4;
+        color: $color-1;
+        font-weight: 700;
+    }
+    
+}

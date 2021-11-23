@@ -12,15 +12,10 @@
 
 -# NAV BAR COMPONENT END
 
-%h1 All albums
-
-%p Coming from Albums#index
-
-= link_to "See all artists", artists_path
-= link_to "See all tracks", tracks_path
-
-= link_to "Add album", new_album_path
 .table
+  %h1 All albums
+  .add-button
+    = link_to "Add album", new_album_path
   .table-header.cols-4
     .header
       %p Album
@@ -45,5 +40,4 @@
         %p= album.released_at.year
       .table-cell
         %p= link_to "Edit", edit_album_path(album.id)
-        |
         %p= link_to "Destroy", album_path(album), method: :delete, data: {confirm: "Are you sure?"}

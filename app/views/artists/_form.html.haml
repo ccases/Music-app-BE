@@ -1,25 +1,26 @@
-= form_with model: @artist do |f|
-  .text-field
-    = f.label :name
-    = f.text_field :name
+.form-in-form-container
+  = form_with model: @artist do |f|
+    .text-field.field-container
+      = f.label :name
+      = f.text_field :name
 
-  .text-area-field
-    = f.label :bio
-    = f.text_area :bio
+    .text-area-field.field-container
+      = f.label :bio
+      = f.text_area :bio
 
-  .date-field
-    = f.label :formed_at
-    = f.date_field :formed_at
+    .date-field.field-container
+      = f.label :formed_at
+      = f.date_field :formed_at
 
-  .file-field
-    = f.label :avatar
-    = f.file_field :avatar
-  
-  .file-field
-    = f.label :cover_photo
-    = f.file_field :cover_photo
-  %br/
-  = f.submit
+    .file-field.field-container
+      = f.label :avatar
+      = f.file_field :avatar
+    
+    .file-field.field-container
+      = f.label :cover_photo
+      = f.file_field :cover_photo
 
-= link_to artists_path do
-  Back to index
+    .submit-field.field-container
+      = f.submit
+  .back-field.field-container
+    = link_to "Back", artists_path

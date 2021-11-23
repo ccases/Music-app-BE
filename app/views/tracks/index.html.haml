@@ -13,11 +13,13 @@
 
 -# NAV BAR COMPONENT END
 
-%h1 All tracks
 
 
-= link_to "Add track", new_track_path
+
 .table
+  %h1 All tracks
+  .add-button
+    = link_to "Add track", new_track_path
   .table-header.cols-5
     .header
       %p Title
