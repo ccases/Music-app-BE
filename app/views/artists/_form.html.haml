@@ -1,6 +1,8 @@
 .form-in-form-container
   = form_with model: @artist do |f|
     .text-field.field-container
+      - f.object.errors.full_messages_for(:name).each do |msg|
+        %p.error= msg
       = f.label :name
       = f.text_field :name
 
@@ -9,14 +11,20 @@
       = f.text_area :bio
 
     .date-field.field-container
+      - f.object.errors.full_messages_for(:formed_at).each do |msg|
+        %p.error= msg
       = f.label :formed_at
       = f.date_field :formed_at
 
     .file-field.field-container
+      - f.object.errors.full_messages_for(:avatar).each do |msg|
+        %p.error= msg
       = f.label :avatar
       = f.file_field :avatar
     
     .file-field.field-container
+      - f.object.errors.full_messages_for(:cover_photo).each do |msg|
+        %p.error= msg
       = f.label :cover_photo
       = f.file_field :cover_photo
 

@@ -61,6 +61,7 @@ label {
             }
             &:hover + label{
                 color: $color-3;
+                cursor:pointer;
             }
         }
         >label{
@@ -108,9 +109,9 @@ label {
         height:0px;
         width: calc(100% - 20px);
         margin: 0 10px;
-        transform-origin: left center;
+        transform-origin: right center;
         transform: scale(0);
-        transition: transform 0.5s;
+        transition: transform 0.8s;
         border-bottom: 2px solid $color-3;
     }
     > input[type="text"]{
@@ -121,7 +122,7 @@ label {
 
     }
     &:focus-within::after{
-        transform-origin: right center;
+        transform-origin: left center;
         transform: scale(1);
     }
 }

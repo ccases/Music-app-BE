@@ -1,14 +1,20 @@
 .form-in-form-container
   = form_with model: @album do |f|
     .text-field.field-container
+      - f.object.errors.full_messages_for(:name).each do |msg|
+        %p.error= msg
       = f.label :name
       = f.text_field :name
 
     .date-field.field-container
+      - f.object.errors.full_messages_for(:released_at).each do |msg|
+        %p.error= msg
       = f.label :released_at, 'Release date:'
       = f.date_field :released_at
     
     .radio-field.field-container
+      - f.object.errors.full_messages_for(:kind).each do |msg|
+        %p.error= msg
       = f.label :kind, 'Type of album'
       .radio-option
         = f.radio_button :kind, 'lp'
@@ -21,6 +27,8 @@
         = f.label :kind_single, "Single"
 
     .file-field.field-container
+      - f.object.errors.full_messages_for(:cover_art).each do |msg|
+        %p.error= msg
       =f.label :cover_art
       =f.file_field :cover_art
     %br/
